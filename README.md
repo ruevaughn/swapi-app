@@ -10,7 +10,7 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
-To get the repo, simply download the zip, branch it, or git clone it. It's pretty sweet I recommend both starring it AND branching it!
+
 
 * Database creation
 Developed using Postgres - in particular postgres (PostgreSQL) 10.4 on my local machine.
@@ -43,3 +43,34 @@ git push heroku my-feature-branch:master
 ```
 
 This will deploy my-feature-branch to herokus master branch so you can try it out. Ideally this would be done in staging but.... yeah that's a little out of scope here.
+
+# Developing or contributing
+I know no one is going to do this but for the sake of just in case or someting like that i'm adding all this.
+
+## Fork the repo or download the .zip file
+To get the repo, simply download the zip, fork it, or git clone it. It's pretty sweet I recommend both starring it AND forking it AND adding to it!
+
+### Testing
+
+### Debugging
+I use pry - I am now going to test pry-debugger as I haven't had the time before.
+
+#### Pry-doc
+In Order to pry-doc into your gems, I run ```yard config --gem-install-yri``` so as described below YARD automagically adds new gems docs and files at your fingertips.
+
+Yard
+As of YARD v0.9.2:
+
+RubyGems "--document=yri,yard" hooks are now supported. You can auto-configure
+YARD to automatically build the yri index for installed gems by typing:
+
+    $ yard config --gem-install-yri
+
+See `yard config --help` for more information on RubyGems install hooks.
+
+You can also add the following to your .gemspec to have YARD document your gem
+on install:
+
+    spec.metadata["yard.run"] = "yri" # use "yard" to build full HTML docs.
+
+#### .pryrc
