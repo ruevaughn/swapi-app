@@ -12,6 +12,9 @@ module SwapiApp
     config.load_defaults 5.2
 
     config.generators do |g|
+      g.generators do |g|
+        g.factory_bot dir: 'spec/factories'
+      end
       g.test_framework :rspec,
         fixtures: false,
         view_specs: false,

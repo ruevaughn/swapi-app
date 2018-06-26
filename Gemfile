@@ -55,6 +55,7 @@ group :development, :test do
   # Testing Gems for both Development and Test Rails Environments
   # rspec-rails contains: rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :development do
@@ -74,6 +75,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

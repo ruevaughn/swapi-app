@@ -9,8 +9,12 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.string :eye_color
       t.string :birth_year
       t.string :gender
-      t.string :homeworld
       t.string :url
+      # t.belongs_to :homeworld, foreign_key: true
+      # t.references :films
+      # t.belongs_to :species, foreign_key: true
+      # t.references :vehicles
+      # t.references :starships
 
       t.timestamps
     end
