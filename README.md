@@ -4,17 +4,41 @@ Welcome to the world of my Swapi App - where you will be fully emersed in Star W
 
 Things you may want to cover:
 
+* Rails Version
+  5.2.0 (Latest as of date this application was created)
+    * bin/rails credentials:edit
+    * export EDITOR = 'vim' - add in either ~/.zshrc, ~/.bash_profile, etc.
+    * * This EDITOR env variable is so bin/rails credentials:edit knows what editor to use
+    * * other options than vim: export EDITOR='subl -n -w' | export EDITOR='mvim'
+    * * there are plenty more. Do a search and find the one you prefer.
+
 * Ruby version
-2.5.1
+  2.5.1 (Latest as of date this application was created)
 
 * System dependencies
+  * brew install postgresql (There are multiple ways to install - some gui - per OS. homebrew is one macOS option.)
+
+  Postgres Database User with Role - this app was developed using Postgres  (PostgreSQL) 10.4 on my OSX 10.13.5.
+    * create user . Since app was ran with the flag --database=postgresql telling rails
+    * * to generate the files with the PostgreSQL database rathat than the default
+    * * SQLite3. in `config/database.yml` there will be a part that looks like `username: swapi-app`. This is the Postgres role that needs to be created if it doesn't exist.
+    ```createuser -s swapi-app``` command will do it. For Development and Testing with a non critical application I leave no password, so when I ran the command bin/rails credentials:edit it looked like this: SWAPI-APP_DATABASE_PASSWORD: ''.
+    *OUTPUT: > New credentials encrypted and saved.*
+    * * Create databases with bin/rails db:create:all
+
+    To Summarize - after postgres installed and you are ready to start using a database
+    * Find username in config/database.yml
+    * ```createuser -s username```
+    * ```bin/rails credentials:edit``` add ```SWAPI-APP_DATABASE_PASSWORD: ''``` or replace '' with the password you chose for that role.
+    * ```bin/rails db:create:all```
 
 * Configuration
 
 
 * Database creation
-Developed using Postgres - in particular postgres (PostgreSQL) 10.4 on my local machine.
-bin/rails db:create
+psql command and createuser command to setup user
+
+bin/rails db:create:all
 bin/rails db:migrate
 bin/rails db:seed
 
