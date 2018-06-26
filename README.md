@@ -46,7 +46,7 @@ Plans for seed file.
 (I plan to have a Service model which uses the ExternalApi controller to gather the data - the use the service to parse, store in DB, and cache the results. Then, any that aren't gathered during ```bin/rails db:seed```) Will use probably jQuery since that will be the fastest to implement and test rather than a full blown JavaScript Front End Framework.
 
 * How to run the test suite
-TODO: Describe when setup.
+  - bin/rspec - runs every test in every subdirectory in the rspec/ directory.
 
 * Services (job queues, cache servers, search engines, etc.)
 Decide if I want to use caching servers as I ahven't really had the opportunity and this could be a fun time to try it.
