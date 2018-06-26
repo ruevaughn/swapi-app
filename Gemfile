@@ -36,15 +36,19 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# HTTP LIBRARIES - I need to pick one but I want to try them all.
+
 # Usually I use the http library in Ruby to fetch from an API or some other method but i've always wanted to try httparty.
 # https://github.com/jnunemaker/httparty#help-and-docs
 gem 'httparty', '~> 0.16.2'
 
+# HTTP/REST API client library.
+gem 'faraday', '~> 0.9.2'
 
+# I'll probably just use the standard api routes using get requests, but this is a gem that
+# Is a wrapper from http://swapi.co which is the API i'm going to be interfacing with.
 gem 'swgem', '~> 1.0'
 
-# Non Core Gems that can help in displaying information
-gem 'awesome_print', '~> 1.8'
 
 
 group :development, :test do
@@ -75,7 +79,11 @@ end
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-# # EXPERIMENTAL # #
+# # EXPERIMENTAL       # #
+# #    PRY             # #
+# #   ~/.pryrc         # #
+# # ~/.pryrc-helpers.rb # #
+
 # I've always used pry solely in test and development. However, you can use it in heroku
 # So for the first time i'm breaking it out of the test and development groups
 # So I can use it on heroku and see if it's worth it. If you leave a binding.pry in
@@ -97,11 +105,12 @@ gem 'pry-stack_explorer', '~> 0.4.9.2'
 gem 'pry-state', '~> 0.1.10'
 # Uses JSON, Nokogiri and CodeRay to highlight and prettify JSON, XML, HTML, Ruby and anything else CodeRay supports!
 gem 'pry-highlight', '~> 0.1.0'
+# Going to try monokai / 256
+gem 'pry-theme', '~> 1.2'
 
 # A mini view framework for console/irb that's easy to use, even while under its influence.
 # Console goodies include a no-wrap table, auto-pager, tree and menu.
 gem 'hirb', '~> 0.7.3'
+# Non Core Gems that can help in displaying information
+gem 'awesome_print', '~> 1.8'
 
-
-# Going to try monokai / 256
-gem 'pry-theme', '~> 1.2'
