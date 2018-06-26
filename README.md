@@ -13,7 +13,7 @@ Things you may want to cover:
     * * there are plenty more. Do a search and find the one you prefer.
 
 * Ruby version
-  2.5.1 (Latest as of date this application was created)
+  2.5.1 (Latest as of date application was created)
 
 * System dependencies
   * brew install postgresql (There are multiple ways to install - some gui - per OS. homebrew is one macOS option.)
@@ -33,7 +33,7 @@ Things you may want to cover:
     * ```bin/rails db:create:all```
 
 * Configuration
-
+ -- bin/rails generate rspec:install
 
 * Database creation
 psql command and createuser command to setup user
