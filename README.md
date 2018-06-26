@@ -69,3 +69,8 @@ YARD to automatically build the yri index for installed gems by typing:
 See `yard config --help` for more information on RubyGems install hooks.
 
 #### .pryrc
+##### I need to update my pryrc it's out of date.
+https://github.com/ruevaughn/dotfiles/blob/master/.pryrc
+
+#### .irbrc
+https://github.com/ruevaughn/dotfiles/blob/master/.irbrc

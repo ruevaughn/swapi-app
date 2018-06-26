@@ -36,6 +36,14 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Usually I use the http library in Ruby to fetch from an API or some other method but i've always wanted to try httparty.
+# https://github.com/jnunemaker/httparty#help-and-docs
+gem 'httparty', '~> 0.16.2'
+
+# Non Core Gems that can help in displaying information
+gem 'awesome_print', '~> 1.8'
+
+
 group :development, :test do
   # Trying out pry-byebug - i've typically used pry-rails
   # https://github.com/deivid-rodriguez/pry-byebug#commands - example usage of next, step, continue, break, etc. Sweet!
@@ -65,4 +73,5 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# If you are developing on windows or some other use case uncomment this gem as needed.
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
