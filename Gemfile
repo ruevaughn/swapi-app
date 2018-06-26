@@ -59,6 +59,8 @@ group :development, :test do
 end
 
 group :development do
+  # Annotates Rails/ActiveRecord Models, routes, fixtures, and others based on the database schema.
+  gem 'annotate', '~> 2.7', '>= 2.7.4'
   # Binstub for rspec
   gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.

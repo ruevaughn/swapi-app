@@ -37,6 +37,7 @@ Things you may want to cover:
 
 * Configuration
  -- bin/rails generate rspec:install
+ -- https://github.com/ctran/annotate_models/blob/develop/README.rdoc#configuration-in-rails - lists all commands to annotate the models.
 
 * Database creation
 psql command and createuser command to setup user
