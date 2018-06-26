@@ -58,7 +58,9 @@ I use pry - I am now going to test pry-debugger as I haven't had the time before
 #### Pry-doc
 In Order to pry-doc into your gems, I run ```yard config --gem-install-yri``` so as described below YARD automagically adds new gems docs and files at your fingertips.
 
-Yard
+
+#### Yard and Pry
+https://www.rubydoc.info/github/pry/pry/ - yard documentation and pry
 As of YARD v0.9.2:
 
 RubyGems "--document=yri,yard" hooks are now supported. You can auto-configure
@@ -71,6 +73,9 @@ See `yard config --help` for more information on RubyGems install hooks.
 #### .pryrc
 ##### I need to update my pryrc it's out of date.
 https://github.com/ruevaughn/dotfiles/blob/master/.pryrc
+```Mac - place in ~/.pryrc```
 
 #### .irbrc
 https://github.com/ruevaughn/dotfiles/blob/master/.irbrc
+```Mac - place in ~/.irbrc``` - so far just adds one method to show you the methods of an object sorted without the big pappa parent class Object Methods.
+```

@@ -47,12 +47,19 @@ gem 'awesome_print', '~> 1.8'
 group :development, :test do
   # Trying out pry-byebug - i've typically used pry-rails
   # https://github.com/deivid-rodriguez/pry-byebug#commands - example usage of next, step, continue, break, etc. Sweet!
+  gem 'pry', '~> 0.11.3'
   gem 'pry-byebug', '~> 3.6'
   # Pry Doc for when you just can't leave your code but have to know what Rails or a Gem/Library is doing!
+  # show-doc and show-method commands.
+  # https://github.com/pry/pry/wiki/Source-browsing
   gem 'pry-doc', '~> 0.13.4'
   # I obviously like pry
   gem 'pry-stack_explorer', '~> 0.4.9.2'
   gem 'pry-state', '~> 0.1.10'
+
+  # Testing Gems for both Development and Test Rails Environments
+  # rspec-rails contains: rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support
+  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
 end
 
 group :development do
