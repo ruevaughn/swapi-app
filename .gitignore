@@ -25,4 +25,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# macOS Files
 .DS_Store
+
+# RSpec files
+spec/rspec-tmp-file.txt
