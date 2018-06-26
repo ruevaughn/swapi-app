@@ -14,8 +14,9 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  config.before(:suite) { FactoryBot.reload }
   # Custom Configurations
+  # Spring Fix
+  config.before(:suite) { FactoryBot.reload }
   config.default_color = true
 
   # rspec-expectations config goes here. You can use an alternate

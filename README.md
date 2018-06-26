@@ -25,8 +25,11 @@ Things you may want to cover:
     ```createuser -s swapi-app``` command will do it. For Development and Testing with a non critical application I leave no password, so when I ran the command bin/rails credentials:edit it looked like this: SWAPI-APP_DATABASE_PASSWORD: ''.
     *OUTPUT: > New credentials encrypted and saved.*
     * * Create databases with bin/rails db:create:all
-
-    To Summarize - after postgres installed and you are ready to start using a database
+    *
+    * * Note - regarding rails migrations and running them, when using decimal columns * * Be aware of different RDBMS implementations behavior with :decimal columns:
+    * * PostgreSQL: :precision [1..infinity], :scale [0..infinity]. No default.
+    *
+    * * To Summarize - after postgres installed and you are ready to start using a database
     * Find username in config/database.yml
     * ```createuser -s username```
     * ```bin/rails credentials:edit``` add ```SWAPI-APP_DATABASE_PASSWORD: ''``` or replace '' with the password you chose for that role.
