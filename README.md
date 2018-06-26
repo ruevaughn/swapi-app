@@ -68,9 +68,4 @@ YARD to automatically build the yri index for installed gems by typing:
 
 See `yard config --help` for more information on RubyGems install hooks.
 
-You can also add the following to your .gemspec to have YARD document your gem
-on install:
-
-    spec.metadata["yard.run"] = "yri" # use "yard" to build full HTML docs.
-
 #### .pryrc
