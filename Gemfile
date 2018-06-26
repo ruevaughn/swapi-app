@@ -79,10 +79,13 @@ end
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-# # EXPERIMENTAL       # #
-# #    PRY             # #
-# #   ~/.pryrc         # #
-# # ~/.pryrc-helpers.rb # #
+# # # # # # PRY EXPERIMENTAL# # # # # # #
+# #           PRY Setup               # #
+# # ~/.pryrc                          # #
+# # ~/.pryrc-helpers.rb               # #
+# # ~/.pry/themes/monokai.prytheme.rb # #
+# # ~/.pry/themes/see-dotsfiles.rb    # #
+# # # # # # # # # # # # # # # # # # # # #
 
 # I've always used pry solely in test and development. However, you can use it in heroku
 # So for the first time i'm breaking it out of the test and development groups
