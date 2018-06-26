@@ -6,12 +6,11 @@
 #  director      :string
 #  opening_crawl :text
 #  producer      :string
-#  release_date  :string
+#  release_date  :datetime
 #  title         :string
 #  url           :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  episode_id    :integer
 #
 
 require 'rails_helper'

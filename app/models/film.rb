@@ -6,12 +6,11 @@
 #  director      :string
 #  opening_crawl :text
 #  producer      :string
-#  release_date  :string
+#  release_date  :datetime
 #  title         :string
 #  url           :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  episode_id    :integer
 #
 
 class Film < ApplicationRecord
@@ -22,5 +21,5 @@ class Film < ApplicationRecord
   has_many :planets, through: :films_planets
   has_many :species, through: :films_species
   has_many :starships, through: :films_starships
-  has_many :vehicles, through: :films_vehicles
+  has_many :vehicles, through: :films_vehicles, primary_key: :vehicle_id
 end

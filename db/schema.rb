@@ -16,12 +16,11 @@ ActiveRecord::Schema.define(version: 2018_06_26_161838) do
   enable_extension "plpgsql"
 
   create_table "films", force: :cascade do |t|
-    t.integer "episode_id"
     t.string "title"
     t.string "url"
     t.string "director"
     t.string "producer"
-    t.string "release_date"
+    t.datetime "release_date"
     t.text "opening_crawl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -74,6 +73,7 @@ ActiveRecord::Schema.define(version: 2018_06_26_161838) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["id"], name: "index_people_on_id"
   end
 
   create_table "people_planets", id: false, force: :cascade do |t|
@@ -147,7 +147,7 @@ ActiveRecord::Schema.define(version: 2018_06_26_161838) do
     t.float "passengers"
     t.float "cargo_capacity"
     t.string "consumables"
-    t.decimal "hyerdrive_rating"
+    t.float "hyerdrive_rating"
     t.string "MGLT"
     t.string "integer"
     t.string "starship_class"

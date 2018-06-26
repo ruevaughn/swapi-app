@@ -1,7 +1,8 @@
 class CreateStarships < ActiveRecord::Migration[5.2]
   def change
     create_table :starships do |t|
-      t.string :name
+
+      t.string :name, unique: true
       t.string :model
       t.string :manufacturer
       t.decimal :cost_in_credits
@@ -11,7 +12,7 @@ class CreateStarships < ActiveRecord::Migration[5.2]
       t.float :passengers
       t.float :cargo_capacity
       t.string :consumables
-      t.decimal :hyerdrive_rating
+      t.float :hyerdrive_rating, scale: 1
       t.string :MGLT
       t.string :integer
       t.string :starship_class

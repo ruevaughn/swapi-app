@@ -15,9 +15,24 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_people_on_id  (id)
+#
 
 require 'rails_helper'
 
-RSpec.describe Person, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe Person do
+  describe ('valid') do
+    it "is valid with a name" do
+      name = Faker::Name
+      person = build(:person, name: name)
+      expect(person).to be_valid
+    end
+
+    it "is invalid without a name" do
+      person = build(:person, name: nil)
+      expect(person).to_not be_valid
+    end
+  end
 end

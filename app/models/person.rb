@@ -15,13 +15,18 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_people_on_id  (id)
+#
 
 class Person < ApplicationRecord
+  validates :name, presence: true
   has_many :films, through: :people_films
   has_many :planets, through: :people_planets
   has_many :species, through: :people_species
   has_many :starships, through: :people_starships
   has_many :vehicles, through: :people_vehicles
-  belongs_to :homeworld, class_name: "Planet", foreign_key: 'planet_id', inverse_of: :person_id
+  # belongs_to :homeworld, inverse_of: :planet, foreign_key: :planet_id
 
 end

@@ -55,7 +55,8 @@ group :development, :test do
   # Testing Gems for both Development and Test Rails Environments
   # rspec-rails contains: rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
-  gem "factory_bot_rails", "~> 4.0"
+  gem 'factory_bot_rails', '~> 4.0'
+  gem 'faker', '~> 1.8', '>= 1.8.7'
 end
 
 group :development do

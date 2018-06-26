@@ -15,6 +15,10 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_people_on_id  (id)
+#
 
 FactoryBot.define do
   factory :person do
@@ -26,12 +30,6 @@ FactoryBot.define do
     eye_color "MyString"
     birth_year "MyString"
     gender "MyString"
-    homeworld "MyString"
     url "MyString"
-    homeworld nil
-    film ""
-    species nil
-    vehicles ""
-    starships ""
   end
 end

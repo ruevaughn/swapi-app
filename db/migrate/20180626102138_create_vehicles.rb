@@ -1,6 +1,7 @@
 class CreateVehicles < ActiveRecord::Migration[5.2]
   def change
     create_table :vehicles do |t|
+
       t.string :name
       t.string :model
       t.string :manufacturer
@@ -13,6 +14,7 @@ class CreateVehicles < ActiveRecord::Migration[5.2]
       t.float :cargo_capacity
       t.string :consumables
       t.string :vehicle_class
+
       t.timestamps
     end
   end

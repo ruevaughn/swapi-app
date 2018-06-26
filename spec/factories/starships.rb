@@ -8,7 +8,7 @@
 #  consumables            :string
 #  cost_in_credits        :decimal(, )
 #  crew                   :string
-#  hyerdrive_rating       :decimal(, )
+#  hyerdrive_rating       :float
 #  integer                :string
 #  length                 :decimal(, )
 #  manufacturer           :string
