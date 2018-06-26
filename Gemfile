@@ -37,8 +37,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Trying out pry-byebug - i've typically used pry-rails
+  # https://github.com/deivid-rodriguez/pry-byebug#commands - example usage of next, step, continue, break, etc. Sweet!
+  gem 'pry-byebug', '~> 3.6'
+  # Pry Doc for when you just can't leave your code but have to know what Rails or a Gem/Library is doing!
+  gem 'pry-doc', '~> 0.13.4'
+  # I obviously like pry
+  gem 'pry-stack_explorer', '~> 0.4.9.2'
+  gem 'pry-state', '~> 0.1.10'
 end
 
 group :development do
