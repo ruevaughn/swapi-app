@@ -16,8 +16,9 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+# The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
+gem 'bootstrap', '~> 4.1', '>= 4.1.1'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -36,19 +37,31 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-# HTTP LIBRARIES - I need to pick one but I want to try them all.
+# # #
+# swapi.co API gem options
+# Installing locally
+# gem install swgem --version '1.0' --install-dir 'vendor'
+# # #
 
-# Usually I use the http library in Ruby to fetch from an API or some other method but i've always wanted to try httparty.
-# https://github.com/jnunemaker/httparty#help-and-docs
-gem 'httparty', '~> 0.16.2'
+# Gems for interfacing with swapi.co api.
 
-# HTTP/REST API client library.
-gem 'faraday', '~> 0.9.2'
+# Is a wrapper from http://swapi.co
+# gem 'swgem', '~> 1.0'
 
-# I'll probably just use the standard api routes using get requests, but this is a gem that
-# Is a wrapper from http://swapi.co which is the API i'm going to be interfacing with.
-gem 'swgem', '~> 1.0'
+# A Ruby interface to SWAPI (the Star Wars API). http://swapi.co/
+# gem 'tatooine', '~> 1.0', '>= 1.0.1'
 
+# Ruby bindings for the Star Wars API
+# gem 'red5', '~> 0.0.5'
+
+# A wrapper gem that handles interactions with the Star Wars Api
+# gem 'swapir', '~> 2.0', '>= 2.0.1'
+
+# A Ruby interface to the awesome swapi.co api, it matches each api with a resource and method
+# gem 'starwars', '~> 0.0.2'
+
+# This is a wrapper from http://swapi.co
+# gem 'swgem', '~> 1.0'
 
 
 group :development, :test do
