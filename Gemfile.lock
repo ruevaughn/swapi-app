@@ -18,6 +18,8 @@ GEM
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionpack-page_caching (1.1.0)
+      actionpack (>= 4.0.0, < 6)
     actionview (5.2.0)
       activesupport (= 5.2.0)
       builder (~> 3.1)
@@ -178,6 +180,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redis (4.0.1)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -251,6 +254,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpack-page_caching (~> 1.1)
   annotate (~> 2.7, >= 2.7.4)
   awesome_print (~> 1.8)
   bootsnap (>= 1.1.0)
@@ -272,6 +276,7 @@ DEPENDENCIES
   pry-theme (~> 1.2)
   puma (~> 3.11)
   rails (~> 5.2.0)
+  redis (~> 4.0, >= 4.0.1)
   rspec-rails (~> 3.7, >= 3.7.2)
   sass-rails (~> 5.0)
   selenium-webdriver

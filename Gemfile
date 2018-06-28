@@ -23,8 +23,11 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
+# Static page caching for Action Pack (removed from core in Rails 4.0)
+gem 'actionpack-page_caching', '~> 1.1'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0', '>= 4.0.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
