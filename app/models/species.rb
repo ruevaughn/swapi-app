@@ -21,4 +21,13 @@
 class Species < ApplicationRecord
   has_many :people, through: :people_species, class_name: "People"
   has_many :films, through: :films_species
+
+  def self.last_received_page
+    0
+  end
+
+  def self.has_all_data?
+    false
+  end
+
 end

@@ -15,6 +15,11 @@ RSpec.describe SpeciesController do
       get :show, params: { id: species.id }
       expect(response).to have_http_status(:success)
     end
+
+    it "returns http success if the id does not exist" do
+    end
+
+
   end
 
 end

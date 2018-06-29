@@ -30,11 +30,11 @@ gem 'actionpack-page_caching', '~> 1.1'
 gem 'redis', '~> 4.0', '>= 4.0.1'
 # Ruby wrapper for hiredis (protocol serialization/deserialization and blocking I/O)
 gem 'hiredis', '~> 0.6.1'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+# HTTP/REST API client library.
+gem 'faraday', '~> 0.15.2'
+# Simple, efficient background processing for Ruby.
+gem 'sidekiq', '~> 5.1', '>= 5.1.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -43,12 +43,10 @@ gem 'hiredis', '~> 0.6.1'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # # #
-# swapi.co API gem options
+# swapi.co API gem options - Simple, efficient background processing for Ruby.
 # Installing locally
 # gem install swgem --version '1.0' --install-dir 'vendor'
 # # #
-
-# Gems for interfacing with swapi.co api.
 
 # Is a wrapper from http://swapi.co
 # gem 'swgem', '~> 1.0'

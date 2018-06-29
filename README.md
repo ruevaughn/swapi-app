@@ -1,8 +1,13 @@
 # README
 
-Welcome to the world of my Swapi App - where you will be fully emersed in Star Wars lore, legend, and myth! But really, welcome and here are some helpful tips for getting the application going and running the test suite, as well as the tech stack being used.
+Welcome to the world of my Swapi App - where you will be fully emersed in Star Wars lore and legend! But really, welcome and here are some helpful tips for getting the application going and running the test suite, as well as the tech stack being used.
 
-Things you may want to cover:
+## This application calls the Star Wars API (https://swapi.co) for data
+  * Rather than use a Pre-built Gem/Libray, I am just going to used standard http requests.
+  * Obviously the data could all be scraped and model filled in before
+  the app is even booted up, (run seeds file for exactly that) but
+  this is to demonstrate API calls on the fly and properly handling them
+  in a scalable environment.
 
 * Rails Version
   5.2.0 (Latest as of date this application was created)
@@ -35,6 +40,12 @@ Things you may want to cover:
     * ```bin/rails credentials:edit``` add ```SWAPI-APP_DATABASE_PASSWORD: ''``` or replace '' with the password you chose for that role.
     * ```bin/rails db:create:all```
 
+  Redis
+    * The Front end call will be asynchronous, so the backend should be too. Even though we know with this API the requests should be fast,
+    you actually never know.
+    * brew install redis for osx using Homebrew, can lookup various OS installations
+
+
 * Configuration
  -- bin/rails generate rspec:install
  -- https://github.com/ctran/annotate_models/blob/develop/README.rdoc#configuration-in-rails - lists all commands to annotate the models.
@@ -53,7 +64,7 @@ Plans for seed file.
   - bin/rspec - runs every test in every subdirectory in the rspec/ directory.
 
 * Services (job queues, cache servers, search engines, etc.)
-Decide if I want to use caching servers as I ahven't really had the opportunity and this could be a fun time to try it.
+  *sidekiq* - job queues
 
 * Deployment instructions
 To deploy to heroku using master branch, simply

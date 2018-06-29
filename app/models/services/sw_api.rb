@@ -1,10 +1,25 @@
+# == Schema Information
+#
+# Table name: services_sw_apis
+#
+#  id         :bigint(8)        not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Services::SwApi < ApplicationRecord
-  def find_one(attrs={})
+  def self.get_resource(resource)
+    resource = swapi_find_resource_job.perform(resource)
+    if resource
+    else
+    end
   end
 
-  def find_all(attrs={})
+  def self.get_resources(resource, page)
+    resources = SwapiFindResourcesJob.perform_now(resource,page)
+    binding.pry
   end
 
-  def find_next(current)
+  def self.find_next(current)
   end
 end
