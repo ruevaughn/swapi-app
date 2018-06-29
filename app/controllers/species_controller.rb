@@ -3,9 +3,9 @@ class SpeciesController < ApplicationController
     @species = Species.all
     unless Species.has_all_data?
       page = Species.last_received_page
-      resource = Species.class.to_s.downcase
-      @species = Services::SwApi.get_resources(resource, page)
-      # create in DB
+      resource = Species.to_s.downcase
+      species = Services::SwApi.get_resources(resource, page)
+      Species.create_from_response(species)
    end
 
    render "index"

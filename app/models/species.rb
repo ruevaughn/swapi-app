@@ -30,4 +30,37 @@ class Species < ApplicationRecord
     false
   end
 
+  def self.create_from_response(species)
+    species.each do |species_hash|
+      species_hash = Services::ResourceHandler.format_date_keys(species_hash)
+      species_values = Services::ResourceHandler.extract_relationships(species_hash, 'species')
+      resource_hash = species_values[:resource_hash]
+
+      species = Species.create(resource_hash)
+      films_array = species_values[:films_array] || []
+      people_array = species_values[:people_array] || []
+
+      if films_array
+        films_array.each do |url|
+          film = Film.find_by_url(url)
+          film ||= SwapiFindResourceByUrlJob.run_now(url, species)
+        end
+      end
+
+      if people_array
+        people_array.each do |url|
+          film = People.find_by_url(url)
+          film_response ||= SwapiFindResourceByUrlJob.run_now(url, species) unless film
+
+        end
+      end
+    end
+  end
+
+  def self.get_resource_from_array(species_array)
+
+  end
+
+
+
 end

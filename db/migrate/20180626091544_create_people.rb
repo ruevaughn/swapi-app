@@ -17,4 +17,8 @@ class CreatePeople < ActiveRecord::Migration[5.2]
     add_index :people, :id
     # add_index :people, :planet_id
   end
+
+  def self.find_by_url(url)
+    Person.where(url: url)
+  end
 end

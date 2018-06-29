@@ -116,27 +116,14 @@ end
 # It breaks either way
 # Might as well have it not me a no method error! No but really i just want to try it.
 
-# Trying out pry-byebug - i've typically used pry-rails
-# https://github.com/deivid-rodriguez/pry-byebug#commands - example usage of next, step, continue, break, etc. Sweet!
-# https://github.com/kyrylo/pry-theme/wiki/Pry-Theme-CLI
-gem 'pry', '~> 0.11.3'
-# Using pry-byebug https://github.com/deivid-rodriguez/pry-byebug
-gem 'pry-byebug', '~> 3.6'
 # Pry Doc for when you just can't leave your code but have to know what Rails or a Gem/Library is doing!
 # show-doc and show-method commands.
 # https://github.com/pry/pry/wiki/Source-browsing
 gem 'pry-doc', '~> 0.13.4'
-# I obviously like pry
-gem 'pry-stack_explorer', '~> 0.4.9.2'
 gem 'pry-state', '~> 0.1.10'
-# Uses JSON, Nokogiri and CodeRay to highlight and prettify JSON, XML, HTML, Ruby and anything else CodeRay supports!
-gem 'pry-highlight', '~> 0.1.0'
 # Going to try monokai / 256
 gem 'pry-theme', '~> 1.2'
 
-# A mini view framework for console/irb that's easy to use, even while under its influence.
-# Console goodies include a no-wrap table, auto-pager, tree and menu.
-gem 'hirb', '~> 0.7.3'
 # Non Core Gems that can help in displaying information
 gem 'awesome_print', '~> 1.8'
 

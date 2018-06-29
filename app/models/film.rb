@@ -23,4 +23,9 @@ class Film < ApplicationRecord
   has_many :species, through: :films_species
   has_many :starships, through: :films_starships
   has_many :vehicles, through: :films_vehicles, primary_key: :vehicle_id
+
+  def find_by_url(url)
+    Film.where(url: url)
+  end
+
 end

@@ -9,16 +9,18 @@
 
 class Services::SwApi < ApplicationRecord
   def self.get_resource(resource)
-    resource = swapi_find_resource_job.perform(resource)
-    if resource
-    else
-    end
+    resource = SwapiFindResourceJob.perform_now(resource)
   end
 
   def self.get_resources(resource, page)
-    resources = SwapiFindResourcesJob.perform_now(resource,page)
+    SwapiFindResourcesJob.perform_now(resource,page)
+  end
+
+  def self.find_resource_by_url(url)
+    SwapiFindResourceByUrl.perform_now(url)
   end
 
   def self.find_next(current)
+
   end
 end

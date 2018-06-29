@@ -30,6 +30,6 @@ class SwapiFindResourceJob < ApplicationJob
 
   private
     def url
-      "#{@BASE_URL}/#{@resource_type}/#{@resource_id}/"
+      "#{BASE_URL}/#{@resource_type}/#{@resource_id}/"
     end
 end

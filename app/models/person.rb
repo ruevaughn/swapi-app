@@ -29,4 +29,6 @@ class Person < ApplicationRecord
   has_many :vehicles, through: :people_vehicles
   # belongs_to :homeworld, inverse_of: :planet, foreign_key: :planet_id
 
+  def find_resource
+  end
 end
