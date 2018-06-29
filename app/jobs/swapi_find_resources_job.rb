@@ -5,7 +5,6 @@ class SwapiFindResourcesJob < ApplicationJob
     @resources_type = resource
     @page = page
 
-    binding.pry
     response = Faraday.get(url).inspect
     puts response
   end

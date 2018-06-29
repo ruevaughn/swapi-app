@@ -17,7 +17,6 @@ class Services::SwApi < ApplicationRecord
 
   def self.get_resources(resource, page)
     resources = SwapiFindResourcesJob.perform_now(resource,page)
-    binding.pry
   end
 
   def self.find_next(current)
