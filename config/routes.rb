@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'swapi_apicontroller/index'
-  get 'swapi_apicontroller/show'
-  get 'swapi_apicontroller/create'
-  get 'swapi_apicontroller/new'
-  get 'swapi_ap_icontroller/index'
-  get 'swapi_ap_icontroller/show'
-  get 'swapi_ap_icontroller/create'
-  get 'swapi_ap_icontroller/new'
   root to: 'pages#home'
 
   get 'pages/home'
