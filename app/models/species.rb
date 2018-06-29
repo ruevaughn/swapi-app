@@ -22,39 +22,24 @@ class Species < ApplicationRecord
   has_many :people, through: :people_species, class_name: "People"
   has_many :films, through: :films_species
 
+  def self.set_received_page
+    last_received_page += 1
+  end
+
   def self.last_received_page
-    0
+    last_received_page ||= 0
+  end
+
+  def self.next_page
+    last_received_page + 1
+  end
+
+  def self.finished
+    has_all_data = true
   end
 
   def self.has_all_data?
-    false
-  end
-
-  def self.create_from_response(species)
-    species.each do |species_hash|
-      species_hash = Services::ResourceHandler.format_date_keys(species_hash)
-      species_values = Services::ResourceHandler.extract_relationships(species_hash, 'species')
-      resource_hash = species_values[:resource_hash]
-
-      species = Species.create(resource_hash)
-      films_array = species_values[:films_array] || []
-      people_array = species_values[:people_array] || []
-
-      if films_array
-        films_array.each do |url|
-          film = Film.find_by_url(url)
-          film ||= SwapiFindResourceByUrlJob.run_now(url, species)
-        end
-      end
-
-      if people_array
-        people_array.each do |url|
-          film = People.find_by_url(url)
-          film_response ||= SwapiFindResourceByUrlJob.run_now(url, species) unless film
-
-        end
-      end
-    end
+    has_all_data ||= false
   end
 
 end
