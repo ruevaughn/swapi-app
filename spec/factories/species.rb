@@ -28,10 +28,10 @@ FactoryBot.define do
     hair_colors "MyString"
     eye_colors "MyString"
     average_lifespan 1.5
-    homeworld ""
     language "MyString"
-    people nil
-    films nil
     url "MyString"
+    # homeworld ""
+    # people nil
+    # films nil
   end
 end

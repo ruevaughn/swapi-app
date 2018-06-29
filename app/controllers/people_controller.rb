@@ -3,5 +3,12 @@ class PeopleController < ApplicationController
   end
 
   def show
+    render "show"
+  end
+
+  def new
+  end
+
+  def create
   end
 end

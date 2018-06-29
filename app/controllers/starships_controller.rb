@@ -3,6 +3,7 @@ class StarshipsController < ApplicationController
   end
 
   def show
+    render "show"
   end
 
   def new

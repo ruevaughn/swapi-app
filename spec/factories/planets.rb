@@ -29,9 +29,10 @@ FactoryBot.define do
     terrain "MyString"
     surface_water 1.5
     population "MyString"
-    residents nil
-    films "MyString"
-    references "MyString"
     url "MyString"
+
+     # residents nil
+     # films "MyString"
+     # references "MyString"
   end
 end

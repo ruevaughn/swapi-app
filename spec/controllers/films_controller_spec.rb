@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe FilmsController, type: :controller do
+RSpec.describe FilmsController do
+  let(:film) { create(:film) }
 
   describe "GET #index" do
     it "returns http success" do
@@ -11,7 +12,7 @@ RSpec.describe FilmsController, type: :controller do
 
   describe "GET #show" do
     it "returns http success" do
-      get :show
+      get :show, params: { id: film.id }
       expect(response).to have_http_status(:success)
     end
   end

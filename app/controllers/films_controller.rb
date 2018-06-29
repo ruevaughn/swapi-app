@@ -1,8 +1,10 @@
 class FilmsController < ApplicationController
+
   def index
   end
 
   def show
+    render :show
   end
 
   def new

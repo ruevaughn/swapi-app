@@ -11,6 +11,7 @@
 #  url           :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  episode_id    :string
 #
 
 require 'rails_helper'

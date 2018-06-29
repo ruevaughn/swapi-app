@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe StarshipsController, type: :controller do
+RSpec.describe StarshipsController do
+  let(:starship) {create(:starship)}
 
   describe "GET #index" do
     it "returns http success" do
@@ -11,7 +12,7 @@ RSpec.describe StarshipsController, type: :controller do
 
   describe "GET #show" do
     it "returns http success" do
-      get :show
+      get :show, params: {id: starship.id}
       expect(response).to have_http_status(:success)
     end
   end

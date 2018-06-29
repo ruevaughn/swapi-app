@@ -38,8 +38,8 @@ FactoryBot.define do
     MGLT "MyString"
     integer "MyString"
     starship_class "MyString"
-    pilots nil
-    films nil
+    # pilots nil
+    # films nil
     url "MyString"
   end
 end
