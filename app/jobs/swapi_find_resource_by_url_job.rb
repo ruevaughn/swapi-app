@@ -1,3 +1,4 @@
+
 class SwapiFindResourceByUrlJob < ApplicationJob
   queue_as :default
 
@@ -5,6 +6,7 @@ class SwapiFindResourceByUrlJob < ApplicationJob
     conn = Faraday.new :request => { :params_encoder => Faraday::FlatParamsEncoder }
 
     response = conn.get(url)
-    { response: JSON.parse(response.body)["results"], association: resource}
+    # { response: JSON.parse(response.body)["results"], association: resource}
+    JSON.parse(response.body)["results"]
   end
 end

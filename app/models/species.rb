@@ -57,10 +57,4 @@ class Species < ApplicationRecord
     end
   end
 
-  def self.get_resource_from_array(species_array)
-
-  end
-
-
-
 end
