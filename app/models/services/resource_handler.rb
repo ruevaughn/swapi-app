@@ -35,7 +35,6 @@ class Services::ResourceHandler < ApplicationRecord
           elsif resource
             resource.try(relationship_symbol) << resource
           else
-            binding.pry
             relationships = get_relationships(relationship_symbol)
             resource_name = relationship_symbol.to_s.pluralize.downcase
             response = SwapiFindResourceByUrlJob.perform_now(url, resource_name, relationships, resource )
