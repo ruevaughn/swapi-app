@@ -34,7 +34,7 @@ gem 'hiredis', '~> 0.6.1'
 # HTTP/REST API client library.
 gem 'faraday', '~> 0.15.2'
 # Simple, efficient background processing for Ruby.
-gem 'sidekiq', '~> 5.1', '>= 5.1.3'
+gem 'sidekiq', '~> 5.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
